@@ -99,7 +99,6 @@ export default async function AuthorPage(props: Props) {
                 title={"Ir para o site pessoal do " + data.person.name}
                 target="_blank"
                 role="button"
-                arial-disabled={!data.person.personal_page}
                 disabled={!data.person.personal_page}
               >
                 <span className="sr-only">Site Pessoal</span>
@@ -144,7 +143,6 @@ export default async function AuthorPage(props: Props) {
                 title={"Ir para o currículo Lattes do " + data.person.name}
                 target="_blank"
                 role="button"
-                arial-disabled={!data.person.latter}
                 disabled={!data.person.latter}
               >
                 <span className="sr-only">Currículo Lattes</span>
@@ -174,7 +172,6 @@ export default async function AuthorPage(props: Props) {
                 href="href={`mailto:${props.email}`}"
                 title={"Enviar email para " + data.person.email}
                 role="button"
-                arial-disabled={!data.person.email}
                 disabled={!data.person.email}
               >
                 <svg
