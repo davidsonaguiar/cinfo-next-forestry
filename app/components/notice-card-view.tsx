@@ -10,23 +10,26 @@ export type NoticeCardViewProps = {
 
 export default function NoticeCardView(props: NoticeCardViewProps) {
   return (
-    <div className="w-full  bg-white grid grid-rows-[200px_200px_40px]">
-      <div className="w-full h-full bg-zinc-300">
+    <div className="w-full p-3 bg-white border border-zinc-300 rounded-lg shadow-md grid grid-rows-[200px_180px]">
+      <div className="w-full h-full">
         <Image 
           src={props.cover} 
           alt="cover image" 
           width={500} 
           height={500} 
-          className="block w-full h-full object-cover"
+          className="w-full h-full border border-zinc-300 rounded block object-cover"
         />
       </div>
-      <div className="p-3 border border-border flex flex-col">
-        <h3 className="mb-2 text-primary font-semibold">{props.title}</h3>
-        <p className="text-foreground">{props.description}</p>
+      <div className="py-3 flex flex-col">
+        <h3 className="mb-2 text-sky-600 font-semibold hover:underline line-clamp-3">
+          <Link href={"/noticias/" + props.link}>
+            {props.title}
+          </Link>
+        </h3>
+        <p className="text-zinc-800 text-sm line-clamp-4">
+          {props.description}
+        </p>
       </div>
-      <Link href={props.link} className="h-full text-primary font-medium grid place-content-center uppercase">
-        Ler mais
-      </Link>
     </div>
   );
 }

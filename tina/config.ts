@@ -1,4 +1,9 @@
 import { defineConfig } from "tinacms";
+import { PersonCollection } from "./collections/person";
+import { TeacherCollection } from "./collections/teacher";
+import { NoticeCollection } from "./collections/notice";
+import { CourseCollection } from "./collections/course";
+import { DisciplineCollection } from "./collections/discipline";
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -24,81 +29,11 @@ export default defineConfig({
   // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
   schema: {
     collections: [
-      {
-        name: "notice",
-        label: "Noticias",
-        path: "content/notices",
-        fields: [
-          {
-            type: "string",
-            name: "title",
-            label: "Título",
-            isTitle: true,
-            required: true,
-          },
-          {
-            type: "string",
-            name: "description",
-            label: "Descrição",
-            required: true,
-          },
-          {
-            type: "image",
-            name: "cover",
-            label: "Capa",
-            required: true,
-          },
-          {
-            type: "datetime",
-            name: "date",
-            label: "Data",
-            required: true,
-          },
-          {
-            type: "reference",
-            name: "author",
-            label: "Autor",
-            collections: ["author"],
-            required: true,
-          },
-          {
-            type: "rich-text",
-            name: "body",
-            label: "Body",
-            isBody: true,
-            parser: {
-              type: "markdown",
-            }
-          },
-        ],
-        ui: {
-          router: ({ document }) => `/noticias/${document._sys.filename}`,
-        },
-      },
-      {
-        name: "author",
-        label: "Autores",
-        path: "content/authors",
-        fields: [
-          {
-            type: "string",
-            name: "name",
-            label: "Nome",
-            isTitle: true,
-            required: true,
-          },
-          {
-            type: "image",
-            name: "avatar",
-            label: "Avatar",
-          },
-          {
-            type: "rich-text",
-            name: "bio",
-            label: "Bio",
-          },
-        ],
-      }
+      PersonCollection,
+      TeacherCollection,
+      NoticeCollection,
+      CourseCollection,
+      DisciplineCollection,
     ],
   },
 });

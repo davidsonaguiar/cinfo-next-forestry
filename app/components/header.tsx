@@ -23,7 +23,7 @@ export default function Header() {
         <Container className="flex justify-between items-center">
           <Link href="/">
             <span className="sr-only">CINFO</span>
-            <Image src={logo} alt="CINFO" width={100} />
+            <Image src={logo} alt="CINFO" width={130} />
           </Link>
           <nav>
             <ul>
