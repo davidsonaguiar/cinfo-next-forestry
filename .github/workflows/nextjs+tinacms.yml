@@ -75,8 +75,8 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build TinaCMS
         env:
-          TINA_PUBLIC_CLIENT_ID: 88d43768-6f7d-4952-acf9-331be7ac5a49
-          TINA_TOKEN: 98609596739115dd117db656f0755caa0bfa8031
+          TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
+          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
         run: npx tinacms build
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
