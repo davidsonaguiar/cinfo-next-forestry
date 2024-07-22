@@ -17,7 +17,7 @@ console.log("TINA_TOKEN - Local: " + process.env.TINA_TOKEN);
 
 export default defineConfig({
   branch,
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
+  clientId: process.env.TINA_PUBLIC_CLIENT_ID,
   token: process.env.TINA_TOKEN,
   build: {
     outputFolder: "admin",
