@@ -77,6 +77,8 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build TinaCMS
+          echo "Building TinaCMS ${{ secrets.TINA_PUBLIC_CLIENT_ID }}"
+          echo "Building TinaCMS ${{ secrets.TINA_TOKEN }}"
         env:
           TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
           TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
