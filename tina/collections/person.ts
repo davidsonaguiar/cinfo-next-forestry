@@ -44,4 +44,7 @@ export const PersonCollection: Collection = {
             required: true,
         }
     ],
+    ui: {
+        router: (params) => `/pessoas/${params.document._sys.relativePath.replace(".mdx", "") || ""}`,
+    }  
 }
