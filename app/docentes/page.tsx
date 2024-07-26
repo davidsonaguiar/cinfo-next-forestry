@@ -1,4 +1,4 @@
-import client from "@/tina/__generated__/client";
+import client from "../../tina/__generated__/client";
 import Title from "../components/title";
 import TeacherCardView from "../components/teacher-card-view";
 

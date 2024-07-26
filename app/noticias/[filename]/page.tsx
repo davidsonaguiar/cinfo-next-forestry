@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Title from "../../components/title";
-import client from "@/tina/__generated__/client";
+import client from "../../../tina/__generated__/client";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import Link from "next/link";
 

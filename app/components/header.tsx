@@ -2,7 +2,7 @@ import Image from "next/image";
 import Container from "./container";
 import Link from "next/link";
 
-import logo from "@/app/assets/logo.png";
+import logo from "../assets/logo.png";
 
 const routersGroups = [
     {

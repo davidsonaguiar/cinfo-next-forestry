@@ -1,9 +1,8 @@
-import NoticeCardView from "@/app/components/notice-card-view";
-import Title from "@/app/components/title";
-import ButtonLink from "@/app/docentes/components/button-link";
-import client from "@/tina/__generated__/client";
 import Image from "next/image";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
+import client from "../../../tina/__generated__/client";
+import Title from "../../components/title";
+import ButtonLink from "../../docentes/components/button-link";
 
 interface Props {
   params: {

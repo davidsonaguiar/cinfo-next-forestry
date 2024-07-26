@@ -12,14 +12,13 @@ export const metadata: Metadata = {
 };
 
 const classBody =
-  "min-h-screen bg-neutral-100 font-sans antialiased " +
-  inter.className;
+  "min-h-screen bg-neutral-100 font-sans antialiased " + inter.className;
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+interface Props {
   children: React.ReactNode;
-}>) {
+}
+
+export default function RootLayout({ children }: Props) {
   return (
     <html lang="pt-BR">
       <body className={classBody}>
