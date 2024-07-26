@@ -12,7 +12,7 @@ export default function NoticeCardView(props: NoticeCardViewProps) {
   return (
     <div className="w-full p-3 bg-white border border-zinc-300 rounded-lg shadow-md grid grid-rows-[200px_180px]">
       <div className="w-full h-full">
-        <Image 
+        <img 
           src={props.cover} 
           alt="cover image" 
           width={500} 
